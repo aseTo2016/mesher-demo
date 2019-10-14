@@ -1,6 +1,6 @@
 FROM golang:1.11-alpine
 
-COPY domomesher /opt/demo-mesher/bin/
+COPY demomesher /opt/demo-mesher/bin/
 COPY start.sh /opt/demo-mesher/bin/
 
 
