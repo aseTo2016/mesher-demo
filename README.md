@@ -6,8 +6,8 @@ mesher service
 2. provide a Dockerfile
 
 ## api
-1. get /demo/hello
-response: Hello, go mesher demo
+1. get /demo/hello   
+response: Hello, go mesher demo   
 description: in java mesher demo: mesher-demo-server case:
 mesher-demo-server's api /demo/greeting will invoke it
 ```java
@@ -25,7 +25,7 @@ RequestOptions requestOptions = new RequestOptions();
             }
         })).end();
 ```
-2. get /demo/greeting
+2. get /demo/greeting   
 this api will invoke java demo mesher-demo-server's /demo/hello api:
 ```go
 	resp, body, errs := proxy.Get("http://demo-mesher-server:8090/demo/hello").EndBytes()
