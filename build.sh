@@ -17,7 +17,7 @@ function build() {
     [ -f "${cur_dir}/Dockerfile" ] && rm -rf "${cur_dir}"/Dockerfile
     [ -f "${cur_dir}/start.sh" ] && rm -rf "${cur_dir}/start.sh"
 
-    go build -o "${bin_file}" "${main_dir}/main.go"
+    CGO_ENABLED=0 go build -o "${bin_file}" "${main_dir}/main.go"
 
     cp "${cur_dir}/src/code.huawei.com/deployment/Dockerfile" "${cur_dir}"
     cp "${cur_dir}/src/code.huawei.com/script/start.sh" "${cur_dir}"

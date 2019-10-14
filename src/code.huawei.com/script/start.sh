@@ -1,6 +1,6 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-function init() {
+init() {
     cur_dir=$(pwd)
     base_dir=$(readlink -f "${cur_dir}/../")
     bin_dir="${base_dir}/bin"
@@ -8,7 +8,7 @@ function init() {
 }
 
 # just export 127.0.0.1,listen 127.0.0.1
-function exportIP() {
+exportIP() {
   local ethName="eth0"
 
   local ip_add="127.0.0.1"
@@ -27,11 +27,11 @@ function exportIP() {
   export LISTEN_IP=${ip_add}
 }
 
-function run() {
+run() {
     "${bin_dir}"/$bin_file_name
 }
 
-function main() {
+main() {
     init
     exportIP
     run
